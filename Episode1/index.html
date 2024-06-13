@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+      .merriweather-light {
+        font-family: "Merriweather", serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .merriweather-regular {
+        font-family: "Merriweather", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .merriweather-bold {
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .merriweather-black {
+        font-family: "Merriweather", serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      .merriweather-light-italic {
+        font-family: "Merriweather", serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .merriweather-regular-italic {
+        font-family: "Merriweather", serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .merriweather-bold-italic {
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .merriweather-black-italic {
+        font-family: "Merriweather", serif;
+        font-weight: 900;
+        font-style: italic;
+      }
+
+      body {
+        font-family: "Merriweather", serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 30px;
+      }
+
+      b,
+      strong {
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- 
+        <h1>Hello World!</h1>
+        // #1 using html -->
+    </div>
+    <script>
+      /* #2 Using JavaScript */
+
+      /*     const heading = document.createElement("h1");
+      heading.innerText = "Hello World from JavaScript!";
+      const root = document.getElementById("root");
+      root.appendChild(heading); */
+    </script>
+
+    <!-- #3 Hello World using React -->
+    <!-- For React Base/Core -->
+    <!-- Script File Order Matters -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- For React Bridge which connects for DOM Manipulations -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="./App.js"></script>
+  </body>
+</html>
