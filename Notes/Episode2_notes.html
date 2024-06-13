@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Full Stack LLD & Projects: React-1: Introduction to React|Lecture
+    </title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+      .merriweather-light {
+        font-family: "Merriweather", serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .merriweather-regular {
+        font-family: "Merriweather", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .merriweather-bold {
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .merriweather-black {
+        font-family: "Merriweather", serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      .merriweather-light-italic {
+        font-family: "Merriweather", serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .merriweather-regular-italic {
+        font-family: "Merriweather", serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .merriweather-bold-italic {
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .merriweather-black-italic {
+        font-family: "Merriweather", serif;
+        font-weight: 900;
+        font-style: italic;
+      }
+
+      body {
+        font-family: "Merriweather", serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 30px;
+      }
+
+      b,
+      strong {
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Notes</h2>
+    <ul>
+      <li>
+        npm : its Full Form is not node package manager, but it manages package.
+      </li>
+      <li>npm manages package, repositary for all packages.</li>
+      <li>All [packages, Library hosted here.</li>
+      <li>How to add npm in your project : npm init</li>
+      <li>
+        Package.json : Configuration for NPM, why we need - Package.json takes
+        care of Dependencies Packages with its version. Configuration for NPM.
+      </li>
+      <li>
+        Start installing dependencies :
+        <ol>
+          <li>
+            bundler : code needs to be compressed, cleaned, bundle, minified
+            before sending to production - is done by bundler. Packages your
+            code to push it to production.
+          </li>
+          <li>Bundlers : webpack, parcel and Vite</li>
+          <li>
+            Parcel install with node - npm install -D parsel - -D:Dev
+            Dependencies phase
+          </li>
+          <li>~ vs ^ in package.json</li>
+          <li>
+            package.json : configuration for npm, it keeps track of what version
+            of package is installed into system. //<!-- ^ caret OR ~ Tilde : Parcel will automatically upgrade to new minor version. -->
+          </li>
+          <li>
+            package-lock.json : keep track of <b>exact version</b> installed.
+            integrity : sha512 - keep track of all versions.
+          </li>
+        </ol>
+      </li>
+      <li>npx parcel index.html : <b>npx = executing package.</b></li>
+      <li>npm i react</li>
+      <li>npm i react-dom</li>
+      <li>
+        <b
+          >npx parcel build index.html : it creates entry point as index.html so
+          remove index.js from package.json</b
+        >
+      </li>
+      <li>
+        dist folder : When you execute parcel it generates development build &
+        hosted in 1234 or 7118, adds dev build in /dist
+      </li>
+      <li>browserslist.dev</li>
+    </ul>
+    <h2>HomeWork</h2>
+    <ul>
+      <li>npm</li>
+      <li>parcel</li>
+      <li>package.json vs package-lock.json</li>
+      <li>~ vs ^ in package.json</li>
+      <li>
+        whats in node-modules folder ? : has all code that packages require, has
+        all packages which are require and exists in node-modules.
+      </li>
+      <li>
+        Transitive Dependencies meaning : Parcel has dependencies on some other
+        packages, which has dependencies on other packgaes.
+      </li>
+      <li>
+        You shoudl always push package.json & package-lock.json AND not to push
+        node_modules. We can generate node_modules using package.json -> npm
+        install
+      </li>
+      <li>Parcel - Consistent Hashing -</li>
+    </ul>
+  </body>
+</html>
