@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Namaste React 01 - inception :
+      https://namastedev.com/learn/namaste-react/ep-01-inception
+    </title>
+    <link rel="stylesheet" href="../body_fontStyle.css" />
+  </head>
+  <body>
+    <h2>Agenda</h2>
+    <ul>
+      <li>appendChild : will append tag with html is exists in parent tag.</li>
+      <li>
+        <b>What is CDN?</b>
+        <ol>
+          <li>
+            CDN : A Content Delivery Network (CDN) is geographically dispersed
+            network of servers and data centers. The goal of CDN is to
+            facilitate increased web performance and high availability by
+            locating web content copies closer to end users.
+          </li>
+          <li>
+            CDN servers store or cache copies of varies web content subsets from
+            a host server, such as applications, video, audio, images and HTML
+            files.
+          </li>
+          <li>
+            CDN by bringing web content nearer to end-users, allows website
+            publishers to control bandwidth consumption, reduce load times, and
+            provide enhanced performance.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <b>What is crossorigin?</b>
+        <ol>
+          <li>
+            CORS - stands for cross-origin resource sharing. It helps in which
+            one webpage requests for another domain for fetching out resources
+            like audio, video, script etc. from third party server without
+            leaking their credentials information.
+          </li>
+          <li>
+            It defines a way of how a browser and server can interact to
+            determine whether it is safe to allow the cross-origin request.
+          </li>
+        </ol>
+      </li>
+      <li>
+        How browser understand Javascript? Javascript Virtual Machine.
+        <ol>
+          <li>
+            Browser like chrome decode Javascript using a compiler like V8
+            Engine.
+          </li>
+          <li>
+            The browser has in-built Javascript engine that is responsible for
+            interpreting and exeuting javascript code. When we visit web page
+            that ocntains javascript, the browser downloads the Javascript code
+            and passes it to the engine, which then reads the code and executes
+            it.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <b>Get React into Project</b>
+        <ol>
+          <li>
+            Using CDN Links - react in included in project, so browser
+            understand React as we injected in project.
+          </li>
+          <li>react : this includes core code of React.</li>
+          <li>
+            react-dom :this is useful for DOM operations. Bridge between react
+            code & DOM.
+          </li>
+          <li>
+            React works on mobile - React-Native : so they use react code file.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <h2>Methods</h2>
+        <ol>
+          <li>
+            React.createElement : takes 3 arguments. (element (h1), object -
+            where it gives attributes to tag (id: "header"), content("Hello") of
+            h1 tag OR 1 child or Array of children (should have unique key) (can
+            be multiple child1,2,..)), this is in "react core"
+          </li>
+          <li>
+            ReactDOM.createRoot :
+            React.craeteRoot(document.getElementById("root")), this is in
+            "react-dom"
+          </li>
+          <li>
+            root.render(heading) : It is adding container in root tag, if
+            something already exists it will overwrite.
+          </li>
+        </ol>
+      </li>
+      <li>
+        JS - order of file matters? - YES, All files should be sequence due to
+        dependency of 2nd file on 1st.
+      </li>
+      <li>dev vs production links?</li>
+      <li>
+        React is library : we can update small portion of code using react. It
+        independently update small portion of code.
+      </li>
+      <li>jsx : React is only written only using .JSX</li>
+    </ul>
+    <hr />
+    <h3>Revision</h3>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
+</html>
