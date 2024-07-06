@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Episode-02 | Igniting our App :
+      https://namastedev.com/learn/namaste-react/ep-02-igniting-our-app
+    </title>
+    <link rel="stylesheet" href="../body_fontStyle.css" />
+  </head>
+  <body>
+    <h2>Agenda</h2>
+    <ul>
+      <li>Ignite React App :</li>
+      <li>
+        npx parcel build index.html => Production code : should be optimized,
+        minified, bundled, compressed And no comments, no console.log
+      </li>
+      <li>
+        <b>npm</b>
+        <ol>
+          <li>
+            npm : node package manager is not full form of npm. There is not
+            full form to it.
+          </li>
+          <li>
+            <b
+              >npm : package manager, manage packages/dependencies which we
+              install in system.</b
+            >
+          </li>
+          <li>
+            It manages packages behind the scene. Takes care of package version
+            in package.json.
+          </li>
+          <li>npm init => It will configure -y(it will skip many things).</li>
+          <li>
+            creates node_modules -> includes all dependencies in node_modules.
+            so its like database for packages.json in which we added
+            configuration=list of dependencies.
+          </li>
+          <li>
+            We added parcel - which has many other dependencies which is why
+            there are many files under node_modules = TRANSITIVE DEPENDENCIES.
+          </li>
+          <li>
+            Every folder in node_modules has -> package.json = TRANSITIVE
+            DEPENDENCIES.
+          </li>
+          <li>NEVER push node_modules to git.</li>
+          <li>
+            ALWAYS push package & package-lock.json to git. As it maintains, has
+            list of all dependencies we need. = We can recreate all node_modules
+            so no need to push node_modules in .git.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <b>package.josn : Configuration for npm</b>
+        <ol>
+          <li>Why need package.json? :</li>
+          <li>
+            <b
+              >It keep approx version of package installed vs package-lock has
+              exact version.</b
+            >
+          </li>
+        </ol>
+      </li>
+      <li>
+        <b>package-lock.json</b>
+        <ol>
+          <li>
+            it keep track of exact version of package/dependency which is
+            installed -
+          </li>
+          <li></li>
+        </ol>
+      </li>
+      <li>
+        <b
+          >bundler (webpack, parson, veet) : will helps to code optimized,
+          minified, bundled, compressed And no comments, no console.log - It
+          packages/bundles our code to ship to production.</b
+        >
+        <ol>
+          <li></li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>
+            create-react-app : behind seen used webpack and babel to build code
+          </li>
+        </ol>
+      </li>
+      <li>
+        <b
+          >parcel : has node package. npm install parcel OR npm install -D(dev
+          dependencies - require for development phase) parcel</b
+        >
+        <ol>
+          <li>
+            In general - 2 dependencies/packages : a. Dev - development 2.
+            Normal - production.
+          </li>
+          <li>"parcel": "^2.12.0" => ^ is known as carot.</li>
+          <li>
+            ~version “Approximately equivalent to version”, will automatically
+            update you to all future patch versions that are
+            backwards-compatible, without incrementing the minor version. ~1.2.3
+            will use releases from 1.2.3 to < 1.3.0.
+          </li>
+          <li>
+            ^version “Compatible with version”, will automatically update you to
+            all future minor/patch versions that are backwards-compatible,
+            without incrementing the major version. ^1.2.3 will use releases
+            from 1.2.3 to < 2.0.0.
+          </li>
+          <li>
+            It has "integrity" in package-lock.json -> integrity has "Sha512" =
+            It verify - whatever version I have in my machine it should be same
+            version I deployed to production.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <b>Ingite Our App</b>
+        <ol>
+          <li>
+            npm (only installs package), here we use command : npx(executing
+            package) parcel index.html => source file/entry point of project,
+            goes to index.html and build development build for our app. and host
+            it to localhost (http://localhost:1234).
+          </li>
+          <li>
+            npx parcel build index.html => all files after bundled goes to dist
+            folder.
+          </li>
+          <li>
+            remove ""main": "App.js"," from package.json else it will give error
+            as conflict with above entry point, as parcel adds index.html is
+            entry point.
+          </li>
+          <li>Parcel created server for us : creates source for us.</li>
+          <li>npm install react : adding/installing react into package</li>
+          <li>npm install react-dom : adding/installing react into package</li>
+        </ol>
+      </li>
+      <li>
+        import() React from "react"("react" : this refers to react in
+        node_modules);
+      </li>
+      <li>
+        <script src="./App.js"></script>
+        => throwing error as @parcel/transformer-js: Browser scripts cannot have
+        imports or exports. so fix by adding <b>type="module"</b>.
+      </li>
+      <li>
+        As soon as you save changes it reflectes in page - done by
+        parcel(bundler) : it caches code in .parcel-cache. It builds faster.
+      </li>
+      <li>HMR : read README.md</li>
+      <li>
+        compatible to old Browser
+        <ol>
+          <li>
+            "browserList": [ "last 2 chrome version", "last 2 firfox version" ]
+          </li>
+          <li>
+            website : https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z,
+            https://github.com/browserslist/browserslist#query-composition
+          </li>
+          <li>cover 99.5% in US</li>
+        </ol>
+      </li>
+    </ul>
+    <hr />
+    <h3>Revision</h3>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
+</html>

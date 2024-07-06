@@ -10,7 +10,7 @@
 - Minification
 - Bundling
 - Compressing
-- Consistent Hashing :
+- Consistent Hashing : tracks all files
 - Code Splitting
 - Differential Bundling : so app runs smoothly in older browser.
 - Diagnostics
