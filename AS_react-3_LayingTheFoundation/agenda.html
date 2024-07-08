@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Namaste React 01 - inception :
+      https://namastedev.com/learn/namaste-react/ep-01-inception
+    </title>
+    <link rel="stylesheet" href="../body_fontStyle.css" />
+  </head>
+  <body>
+    <h2>Agenda</h2>
+    <ul>
+      <li>
+        npm parcel index.html : Executing npm package parcel and giving souce as
+        index.html
+      </li>
+      <li>
+        npm script
+        <ol>
+          <li>build npm script instead of above command again and again</li>
+          <li>
+            "start": "parcel index.html", : created script for development =>
+            Execute - npm start OR npm run start
+          </li>
+          <li>
+            "build": "parcel build index.html", : created script for build =>
+            Execute - npm build OR npm run build
+          </li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <b
+              >JSX =>(Babel)=> React.createElement => ReactElement=JS Object =>
+              HTML Element(render)
+            </b>
+            <br />
+            <b>jsx : Javascript syntax to create React Element.</b>
+          </li>
+          <li><b>{} in JSX we can write any javascript code.</b></li>
+          <li>JSX is not part of react.</li>
+          <li>
+            we can write react code with and without jsx. (jsx makes easy to
+            write React code.)
+          </li>
+          <li>JSX has HTML like syntax, its not html in javascript.</li>
+          <li>Wrap code in () if you want to write JSX code in multiline.</li>
+          <li>
+            Creating element using JSX : const jsxHeading =
+            <h5 id="header">Namaste React using JSX.</h5>
+          </li>
+          <li>above jsx is not valid pure javascript.</li>
+          <li>
+            <b
+              >This code transpile(converts) before it goes to JS Engine and JS
+              Engine receives code that browser understand. transpile(converts)
+              by parcel with help of babel.</b
+            >
+          </li>
+          <li>
+            <b>jsx code converts to React and then it converts to JS.</b>
+          </li>
+          <li>
+            Babel - javascript compiler : its package, installed by parcel. It
+            takes jsx and converts it.
+          </li>
+          <li>
+            React Elements (Object) : React.createElement => Creates an Object =
+            Object
+          </li>
+          <li>When it renders to DOM -> It converts to an HTML</li>
+        </ol>
+      </li>
+      <li>
+        <h3>React components - 2 Types:</h3>
+        <ol>
+          <li>type : class based component - old way</li>
+          <li>
+            type : functional component - new way
+            <ul>
+              <li>
+                functional component = A javascript function which returns a
+                react element.
+              </li>
+              <li>
+                functional component = just a normal Javascript function, which
+                written some piece of JSX code.
+              </li>
+              <li>Name is in CamelCase</li>
+              <li>render component => root.render(<HeaderComponent />)</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <b>Component Composition</b> = > Calling component inside another
+        component.
+      </li>
+      <li>We can Adding React Element in Functional Component</li>
+      <li>Also, Adding Functional Component in React Element.</li>
+      <li>
+        JSX takes care of unexpected attack. Like if someone trys to attack.
+      </li>
+      <li>{Title()} SAME AS &lt;title/&gt;</li>
+    </ul>
+    <hr />
+    <h3>Revision</h3>
+    <ul>
+      <li></li>
+    </ul>
+    <hr />
+    <h3>HomeWork</h3>
+    <ul>
+      <li>Attributes of jsx?</li>
+      <li>how to write img tag in jsx?</li>
+    </ul>
+  </body>
+</html>
