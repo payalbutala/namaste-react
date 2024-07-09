@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Episode-04 | Talk is Cheap, Show Me the Code :
+      https://namastedev.com/learn/namaste-react/ep-04-talk-is-cheap-show-me-the-code
+    </title>
+    <link rel="stylesheet" href="../body_fontStyle.css" />
+  </head>
+  <body>
+    <h2>Agenda</h2>
+    <ul>
+      <li>Plan your app - what to build?</li>
+      <li>how will it look?</li>
+      <li>
+        Inline CSS won;t work how it works with plain HTML, but add style
+        properties as javascript object.
+        <ol>
+          <li>const styleCard = { backgroundColor: "yellow", };</li>
+          <li><div className="res-card" style="{styleCard}"></div></li>
+          <li>
+            <div
+              className="res-card"
+              style="{{backgroundColor: 'yellow'}}"
+            ></div>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <h4>props = properties</h4>
+        <ol>
+          <li>
+            <b
+              >When you want to dynamically pass some data to a component - you
+              pass it as a prop.</b
+            >
+          </li>
+          <li>
+            something which we can pass to components. Like passing some dynamic
+            data to components.
+          </li>
+          <li>
+            Props or Destructing on the fly => {ob1.key1, obj1.key2} = normal
+            arguments to a function.
+          </li>
+          <li>props : returns an object</li>
+          <li>you can pass as many props you wish too.</li>
+        </ol>
+      </li>
+      <li>
+        <b
+          >Configure Driven UI : Controlling UI using Data/Config. Config comes
+          from backend. Eg: At different places there are different options like
+          different offers, different carousal,
+        </b>
+      </li>
+      <li>
+        Whenever we loop : Each item should has unique id/key.
+        <ol>
+          <li>Why we need key?</li>
+          <li>
+            When there are components are at same level, there should be unique
+            id.
+          </li>
+          <li>
+            As if new restaurant came, then react has to add it to some place,
+            suppose 1st place. Then react will append at 1st place if we have
+            given key.
+          </li>
+          <li>If key is not present - react has to render all cards again.</li>
+          <li><b>React says - don't use index as unique key in loop.</b></li>
+        </ol>
+      </li>
+    </ul>
+    <hr />
+    <h3>Revision</h3>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
+</html>
