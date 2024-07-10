@@ -19,12 +19,9 @@
         properties as javascript object.
         <ol>
           <li>const styleCard = { backgroundColor: "yellow", };</li>
-          <li><div className="res-card" style="{styleCard}"></div></li>
+          <li>[div className="res-card" style="{styleCard}"]</li>
           <li>
-            <div
-              className="res-card"
-              style="{{backgroundColor: 'yellow'}}"
-            ></div>
+            [div className="res-card" style="{{backgroundColor: 'yellow'}}" ]
           </li>
         </ol>
       </li>
@@ -50,16 +47,15 @@
         </ol>
       </li>
       <li>
-        <b
-          >Configure Driven UI : Controlling UI using Data/Config. Config comes
+        <h4>
+          Configure Driven UI : Controlling UI using Data/Config. Config comes
           from backend. Eg: At different places there are different options like
           different offers, different carousal,
-        </b>
+        </h4>
       </li>
       <li>
-        Whenever we loop : Each item should has unique id/key.
+        Whenever we loop : Each item should has unique id/key. Why we need key?
         <ol>
-          <li>Why we need key?</li>
           <li>
             When there are components are at same level, there should be unique
             id.

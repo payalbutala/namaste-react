@@ -20,3 +20,26 @@
 - script type="module", it creates nomodule fallback for old browsers.
 - different dev and production bundles
 - npx parcel build index.html : it creates entry point as index.html so remove index.js from package.json
+
+# Namaste Food
+
+1. Name the App
+2. UI Structure - Components
+2.a Header
+    - Logo
+    - Nav Items
+2.b Body
+    - Search
+    - Restaurant Container
+    - Restaurant Card
+    - Dish Name
+    - Image
+    - Restaurant Name
+    - Rating
+    - Cuisines
+    - Time to Deliver
+2.c Footer
+    - Copyright
+    - Links
+    - Address
+    - Contact      

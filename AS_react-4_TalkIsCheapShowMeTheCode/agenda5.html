@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Episode-05 | Let's Get Hooked :
+      https://namastedev.com/learn/namaste-react/ep-05-lets-get-hooked
+    </title>
+    <link rel="stylesheet" href="../body_fontStyle.css" />
+  </head>
+  <body>
+    <h2>Agenda</h2>
+    <ul>
+      <li>
+        <b
+          >Why React? : React makes coding experience very fast, optimises
+          webpage so things happens super fast.</b
+        >
+      </li>
+      <li>
+        We need to import/export component.
+        <h4>Two types of import/export</h4>
+        <ol>
+          <li>
+            default export - ONLY FOR 1 FILE. <br />EG: export default
+            Body(_Name of Component/Variable)
+          </li>
+          <li>
+            default import - ONLY FOR 1 FILE. <br />EG: import _componentName
+            from _Path;
+          </li>
+          <li>
+            Named export -> From single file, we need to export OR import
+            multiple file. <br />EG: export const LOGO_URL(_componentName).
+          </li>
+          <li>
+            Named import -> You need to import it in {} Eg: import { CDN_URL }
+            from _Path("../utils/constants");
+          </li>
+        </ol>
+      </li>
+      <li>
+        <h4>Event Handlers</h4>
+        <ol>
+          <li>onClick : Takes callback function.</li>
+        </ol>
+      </li>
+      <li>
+        <h4>React hook : Normal javascript function given by React.</h4>
+        <ol>
+          <li>useState : helps to Fast DOM Manipulation</li>
+          <li>2 imp React Hooks : useState(), useEffect() </li>
+        </ol>
+      </li>
+      <li>
+        <h4>useState()</h4>
+        <ol>
+          <li>import from React.</li>
+          <li>It should be Named Import :  import { useState } from "react";</li>
+          <li>It creates state variable : </li>
+          <li>It maintains state of component</li>
+          <li>Super powerful state variable will keep the UI in sync with Data Layer.</li>
+          <li><b>Whenever state variable updates React Re-Renders the component. </b></li>
+        </ol>
+      </li>
+      <li>React Algoritham = React Fiber
+        <ol>
+          <li>React uses Reconsiliation Algoritham, also known as React Fiber.</li>
+          <li>DOM (tree) = tags -> 1 Container => 15 Restaurant Cards => Post filter if there are 3 cards => React creates Virtual DOM.</li>
+          <li>Virtual DOM : Object Representation of actual DOM = Normal javascript Object. </li>
+          <li>Diff Algoritham : It finds out difference between Actual vs Virtual DOM. Initaially there are 15 cards after filter = 3. Difference => 12 cards then it actually updates DOM.</li>
+          
+        </ol>
+      </li>
+    </ul>
+    <hr />
+    <h3>HomeWrok</h3>
+    <ul>
+      <li>Can I use Default export along with Named export?</li>
+    </ul>
+  </body>
+</html>
