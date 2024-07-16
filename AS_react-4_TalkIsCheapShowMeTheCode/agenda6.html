@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Episode-06 | Exploring the World :
+      https://namastedev.com/learn/namaste-react/ep-06-exploring-the-world
+    </title>
+    <link rel="stylesheet" href="../body_fontStyle.css" />
+  </head>
+  <body>
+    <h2>Agenda</h2>
+    <ul>
+      <li>
+        <h4>
+          Monolith Architecture: Monolith means composed all in one piece. The
+          Monolithic application describes a single-tiered software application
+          in which different components combined into a single program from a
+          single platform.
+        </h4>
+        <ol>
+          <li>
+            1 Project = API's written + UI + Authentication Code + Database
+            Connectivity + Sending SMS
+          </li>
+          <li>
+            Despite having different components/modules/services, the
+            application is built and deployed as one Application for all
+            platforms (i.e. desktop, mobile and tablet)
+          </li>
+        </ol>
+      </li>
+      <li>
+        <h4>MicroService Architecture:</h4>
+        <ol>
+          <li>
+            We have different service for different job. Like: Backend Service,
+            UI Service, UI Project, Authentication Service, Service connects to
+            Database, Service to send SMS, Service for Email notifications.
+          </li>
+          <li>Theses all services combines together forms a big app.</li>
+          <li>
+            We have all as separate project => <b>Separation of Concerns</b>.
+          </li>
+          <li>
+            <b
+              >It follows Single responsibility Principle where each service has
+              its own job, no-one interfere in it.
+            </b>
+          </li>
+          <li>
+            <b
+              >How these services interact with each other to work application
+              as a single project? =>
+            </b>
+            <ol>
+              <li>
+                They make call to different port/url. Like UI call an API.
+              </li>
+            </ol>
+          </li>
+          <li>
+            <b>How it deploy?</b>
+            <ol>
+              <li>
+                Each service run on their own specific port. We deploy each
+                service on different port.
+              </li>
+              <li>
+                All ports can be mapped to domain name. API -> abc.com/api, UI
+                -> abc.com
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <h4>
+          How React Application, make connection with different microservices.
+        </h4>
+      </li>
+      <li>
+        <h4>How UI Application, fetch data from backend?</h4>
+        <ol>
+          <li>
+            Approach 1 : As soon as page loads - make an API call, when we get
+            data, render it into UI. If API call take 500ms, page will wait &
+            after 500ms it will load UI.
+          </li>
+          <li>
+            Approach 2 : As soon as page loads - we will render UI then make API
+            call, after completion of API data fetch, We will rerender
+            <b>(React render cycle is very fast.)</b> our application with new
+            data.
+          </li>
+          <li>
+            In React, we will always using Approach 2, better Approach with
+            better UX.
+            <ol>
+              <li>No feel like page frozen.</li>
+              <li>Atleast we see UI skeleton.</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <hr />
+    <h3>HomeWork</h3>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
+</html>
