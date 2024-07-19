@@ -84,12 +84,12 @@
         <h4>How UI Application, fetch data from backend?</h4>
         <ol>
           <li>
-            Approach 1 : As soon as page loads - make an API call, when we get
+            <b>Approach 1</b> : As soon as page loads - make an API call, when we get
             data, render it into UI. If API call take 500ms, page will wait &
             after 500ms it will load UI.
           </li>
           <li>
-            Approach 2 : As soon as page loads - we will render UI then make API
+            <b>Approach 2</b> : As soon as page loads - we will render UI then make API
             call, after completion of API data fetch, We will rerender
             <b>(React render cycle is very fast.)</b> our application with new
             data.
@@ -104,11 +104,30 @@
           </li>
         </ol>
       </li>
+      <li>
+        <h4>useEffect : normal React hook. hook = Nothing but simply a normal Javascript Function, it has its normal use case.</h4>
+        <ol>
+          <li>useEffect has 2 arguments => arraw callback function, dependency array</li>
+          <li><b>When will this useEffect callback function will be called? => after component renders. If you want to do something after component render, use useEffect.</b></li>
+        </ol>
+      </li>
+      <li>
+        <b>fetch</b> <p>super power given by browser, JS Engine has, it will fetch data from API.
+        It will return promise.</p>
+      </li>
+      <li><b>cors error</b><p>browser is blocking to access/call an API from 1 origin to different origin.</p></li>
+      <li>optional chaining is to add => ?</li>
+      <li>
+        <b>Shimmer UI : resembles the page's actual UI, so users will understand how quickly the web or mobile app will load even before the content has shown up. </b>
+      </li>
     </ul>
     <hr />
     <h3>HomeWork</h3>
     <ul>
-      <li></li>
+      <li>
+        723 - 2.25 => 
+        687 - 1.85
+      </li>
     </ul>
   </body>
 </html>
