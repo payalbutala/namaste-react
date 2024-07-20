@@ -84,13 +84,13 @@
         <h4>How UI Application, fetch data from backend?</h4>
         <ol>
           <li>
-            <b>Approach 1</b> : As soon as page loads - make an API call, when we get
-            data, render it into UI. If API call take 500ms, page will wait &
-            after 500ms it will load UI.
+            <b>Approach 1</b> : As soon as page loads - make an API call, when
+            we get data, render it into UI. If API call take 500ms, page will
+            wait & after 500ms it will load UI.
           </li>
           <li>
-            <b>Approach 2</b> : As soon as page loads - we will render UI then make API
-            call, after completion of API data fetch, We will rerender
+            <b>Approach 2</b> : As soon as page loads - we will render UI then
+            make API call, after completion of API data fetch, We will rerender
             <b>(React render cycle is very fast.)</b> our application with new
             data.
           </li>
@@ -105,29 +105,100 @@
         </ol>
       </li>
       <li>
-        <h4>useEffect : normal React hook. hook = Nothing but simply a normal Javascript Function, it has its normal use case.</h4>
+        <h4>2 Approaches - how web app fetch data from backend.</h4>
+        <ul>
+          <li>1. When an App load - API call - Render in UI</li>
+          <li>
+            2. When an app load - Render UI - API Call - Re-Render UI with API
+            data
+            <b
+              >(If approach 1 api call takes 500ms it will show blank page which
+              is avodable here.)</b
+            >
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h4>
+          useEffect : normal React hook. hook = Nothing but simply a normal
+          Javascript Function, it has its normal use case.
+        </h4>
         <ol>
-          <li>useEffect has 2 arguments => arraw callback function, dependency array</li>
-          <li><b>When will this useEffect callback function will be called? => after component renders. If you want to do something after component render, use useEffect.</b></li>
+          <li>
+            useEffect has 2 arguments => arraw callback function, dependency
+            array
+          </li>
+          <li>
+            <b
+              >When will this useEffect callback function will be called? =>
+              after component renders. If you want to do something after
+              component render, use useEffect.</b
+            >
+          </li>
         </ol>
       </li>
       <li>
-        <b>fetch</b> <p>super power given by browser, JS Engine has, it will fetch data from API.
-        It will return promise.</p>
+        <h4>fetch</h4>
+        <p>
+          super power given by browser, JS Engine has, it will fetch data from
+          API. It will return promise.
+        </p>
       </li>
-      <li><b>cors error</b><p>browser is blocking to access/call an API from 1 origin to different origin.</p></li>
-      <li>optional chaining is to add => ?</li>
       <li>
-        <b>Shimmer UI : resembles the page's actual UI, so users will understand how quickly the web or mobile app will load even before the content has shown up. </b>
+        <h4>cors error</h4>
+        <p>
+          browser is blocking to access/call an API from 1 origin to different
+          origin.
+        </p>
+      </li>
+      <li>
+        <h4>optional chaining</h4>
+        is to add => ?
+      </li>
+      <li>
+        <div>
+          <h4>Shimmer UI</h4>
+          Resembles the page's actual UI, so users will understand how quickly
+          the web or mobile app will load even before the content has shown up.
+        </div>
+      </li>
+      <li>
+        <h4>Conditional Rendering : render UI based on condition</h4>
+        <p>
+          // Conditional Rendering <br />
+          if (listOfRestaurants.length === 0) { return <Shimmer />; }
+        </p>
+      </li>
+      <li>
+        <h4>State Variable</h4>
+        <h2>
+          Whenever state variable update, react triggers a reconciliation
+          cycle(re-renders the component.)
+        </h2>
+        <ol>
+          <li>
+            <b
+              >Whenever state variable will change React will re-render header
+              component.</b
+            >
+          </li>
+          <li>
+            Able to update const variable because : it is calling complete
+            component once again so next time variable is new variable.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <h2></h2>
+        <!-- <ol>
+          <li></li>
+        </ol> -->
       </li>
     </ul>
     <hr />
     <h3>HomeWork</h3>
     <ul>
-      <li>
-        723 - 2.25 => 
-        687 - 1.85
-      </li>
+      <li></li>
     </ul>
   </body>
 </html>
