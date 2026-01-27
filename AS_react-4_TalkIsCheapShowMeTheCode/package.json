@@ -5,7 +5,8 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build  index.html",
-    "test": "jest"
+    "test": "jest",
+    "proxy": "node proxy-server.js"
   },
   "repository": {
     "type": "git",

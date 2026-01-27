@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Episode-06 | Exploring the World :
-      https://namastedev.com/learn/namaste-react/ep-06-exploring-the-world
+      Episode-07 | Finding the Path :
+      https://namastedev.com/learn/namaste-react/ep-07-finding-the-path
     </title>
     <link rel="stylesheet" href="../body_fontStyle.css" />
   </head>
@@ -14,20 +14,26 @@
     <ul>
       <li>
         <h4>
-          Monolith Architecture: Monolith means composed all in one piece. The
-          Monolithic application describes a single-tiered software application
-          in which different components combined into a single program from a
-          single platform.
+          useEffect HOOK
         </h4>
         <ol>
           <li>
-            1 Project = API's written + UI + Authentication Code + Database
-            Connectivity + Sending SMS
+            2 arguemnts -> callback function, dependency array
           </li>
           <li>
-            Despite having different components/modules/services, the
-            application is built and deployed as one Application for all
-            platforms (i.e. desktop, mobile and tablet)
+            useEffect will be called <b>every time</b> component re-renders if we
+            <b>don't provide dependency array</b>.
+            <ol>
+              <li>
+                If we provide <b>empty dependency array</b>, useEffect will be called
+                <b>only once after component renders</b>.
+              </li>
+              <li>
+                If we <b>provide dependency array</b> with variable, useEffect will be
+                called when <b>variable updates</b>.
+              </li>
+            </ol>
+          </li>
           </li>
         </ol>
       </li>

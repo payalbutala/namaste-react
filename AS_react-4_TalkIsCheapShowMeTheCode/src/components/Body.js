@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { resList } from "../utils/mockData";
 
 const Body = () => {
   // Super Variable - super powerful variable
@@ -19,21 +20,36 @@ const Body = () => {
   // console.log("Body Component Rendered");
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    try {
+      console.log("Attempting to fetch from Swiggy API...");
+      const SWIGGY_API = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
-    const json = await data.json();
-    // console.log(json);
+      // Try to fetch from Swiggy API directly
+      const data = await fetch(SWIGGY_API);
 
-    setListOfRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-      // optional chaining is to add => ?
-    );
+      if (!data.ok) {
+        throw new Error(`API returned status: ${data.status}`);
+      }
 
-    setFilteredRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+      const json = await data.json();
+      console.log("✅ Successfully fetched from Swiggy API:", json);
+
+      const restaurants = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+      if (restaurants && restaurants.length > 0) {
+        setListOfRestaurant(restaurants);
+        setFilteredRestaurant(restaurants);
+      } else {
+        throw new Error("No restaurants found in API response");
+      }
+    } catch (error) {
+      console.warn("⚠️ Failed to fetch from API:", error.message);
+      console.log("📦 Using mock data as fallback...");
+
+      // Fallback to mock data as API is not working
+      setListOfRestaurant(resList?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setFilteredRestaurant(resList?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    }
   };
 
   /* let listOfRestaurants = [];
@@ -49,7 +65,7 @@ const Body = () => {
     return <Shimmer />;
   } */
 
-  return listOfRestaurants.length === 0 ? (
+  return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -84,7 +100,7 @@ const Body = () => {
         <button
           className="btn filter-btn"
           onClick={() => {
-            const filteredList = resList.filter((item) => {
+            const filteredList = listOfRestaurants.filter((item) => {
               return item.info.avgRating > 4;
             });
             setListOfRestaurant(filteredList);
@@ -95,7 +111,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {/* {listOfRestaurants} */}
-        {filteredRestaurant.map((restaurant, index) => (
+        {filteredRestaurant?.map((restaurant) => (
           // Each item should has unique id
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
